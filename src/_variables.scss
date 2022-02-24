@@ -1,0 +1,22 @@
+$grey: #2F3640;
+$yellow: #FBC531;
+$whiteish: #f5f6fa;
+$greyish: #718093;
+$blue: #192a56;
+
+
+@mixin transition($time){
+    transition: $time;
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -o-transition: $time;
+}
+
+@mixin flex($align:center, $justify: center, $dir: row, $wrap: nowrap, $gap: 10px){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    gap: $gap;
+}

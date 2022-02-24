@@ -1,0 +1,49 @@
+@import "../../variables";
+
+#loading-container{
+    width: 100%;
+    transform-box: fill-box;
+    transform-origin: 50%;
+    animation: 2s loading ease-in-out 800ms infinite;
+
+    #ld-grey,
+    #ld-white,
+    #ld-yellow,
+    #ld-blue{
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: 2s squares ease infinite;
+    }
+}
+
+
+
+@keyframes squares{
+    0%{
+        transform: scale(1)
+    }
+    20%{
+        transform: scale(1)
+    }
+    80%{
+        transform: scale(.7)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+@keyframes loading{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    30%{
+        transform: rotateZ(0deg);
+    }
+    70%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}

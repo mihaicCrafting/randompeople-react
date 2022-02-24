@@ -1,0 +1,78 @@
+@import "../../variables";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+.HumanList{
+    margin-top: 200px;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 5cm;
+
+    @include flex($wrap: wrap, $gap: 40px);
+
+    h2{
+        text-align: center;
+        width: 100%;
+        font-family: 'Josefin Sans', sans-serif;
+        color: $whiteish;
+    }
+
+    .Human{
+        background: $greyish;
+        padding: 10px;
+        width: 200px;
+        border-radius: 10px;
+        @include flex($dir: column);
+        cursor: pointer;
+        @include transition(500ms);
+
+        &:hover{
+            box-shadow: 0 0 10px 2px $yellow;
+        }
+
+        img{
+            width: 80%;
+            height: 150px;
+            object-fit: contain;
+            max-height: 150px;
+        }
+
+        p,span{
+            margin: 0;
+            font-family: 'Roboto Mono', monospace;
+            color: $whiteish;
+        }
+        span{
+            font-size: x-small;
+            text-align: right;
+            width: 100%;
+            color: black;
+        }
+
+    }
+
+    .HumanListFiltersContainer{ 
+        width: 100%;
+        @include flex($justify: right);
+
+        @media screen and (width < 600){
+            @include flex($justify: center);
+        }
+
+        .ActualFilters{
+            width: 200px;
+
+            padding: 10px;
+            border-radius: 20px;
+            
+            background: $greyish;
+            @include flex($dir:column);
+
+            div{
+                width: 100%;
+                @include flex($justify:space-between);
+                font-weight: bold;
+            }
+        }
+    }
+}
