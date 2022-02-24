@@ -4,7 +4,7 @@ import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
 import { useEffect,useState } from 'react'
 
 // delay (Seconds)
-const DELAY = 20;
+const DELAY = .2;
 
 export default function HumanList() {
 
@@ -74,23 +74,23 @@ export default function HumanList() {
             <div className='HumanListFiltersContainer'>
             <div className="ActualFilters">
                 <div>
-                    <input type="radio" htmlFor="check1" name="filter" onClick={()=>{changeSortHandler("ascend-by-name")}}/>
-                    <label id="ascending-by-name">Ascending by name</label>
+                    <input type="radio" id="ascending-name" name="filter" onClick={()=>{changeSortHandler("ascend-by-name")}}/>
+                    <label htmlFor="ascending-name">Ascending by name</label>
                 </div>
 
                 <div>
-                    <input type="radio" htmlFor="check1" name="filter" onClick={()=>{changeSortHandler("descend-by-name")}}/>
-                    <label name="descending-by-name">Descending by name</label>
+                    <input type="radio" id="descending-name" name="filter" onClick={()=>{changeSortHandler("descend-by-name")}}/>
+                    <label htmlFor="descending-name">Descending by name</label>
                 </div>
 
                 <div>
-                    <input type="radio" htmlFor="check1" name="filter" onClick={()=>{changeSortHandler("ascend-by-role")}}/>
-                    <label id="ascending-by-role">Ascending by role</label>
+                    <input type="radio" id="ascending-role" name="filter" onClick={()=>{changeSortHandler("ascend-by-role")}}/>
+                    <label htmlFor="ascending-role">Ascending by role</label>
                 </div>
 
                 <div>
-                    <input type="radio" htmlFor="descending-by-role" name="filter" onClick={()=>{changeSortHandler("descend-by-role")}}/>
-                    <label name="descending-by-role">Descending by role</label>
+                    <input type="radio" id="descending-role" name="filter" onClick={()=>{changeSortHandler("descend-by-role")}}/>
+                    <label htmlFor="descending-role">Descending by role</label>
                 </div>
             </div>
             </div>

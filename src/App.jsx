@@ -17,7 +17,6 @@ function App() {
         <Route path="/human/:id" element={<Human/>}/>
         <Route path="*" element={<HomePage/>}/>
       </Routes>
-
     </div>
   )
 }
