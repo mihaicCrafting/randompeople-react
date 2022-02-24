@@ -4,7 +4,7 @@ import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
 import { useEffect,useState } from 'react'
 
 // delay (Seconds)
-const DELAY = .2;
+const DELAY = 5;
 
 export default function HumanList() {
 
